@@ -16,7 +16,6 @@ namespace _2D_Race
         {
             InitializeComponent();
             ChangeScreen(this, new MenuScreen());
-
         }
 
         //change screen when needed

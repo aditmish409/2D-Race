@@ -10,7 +10,10 @@ namespace _2D_Race
 {
     internal class Player
     {
+        //used for hero x and y positions
         public int x, y;
+
+        //declaring hero size and speed
         public int width = 10;
         public int height = 10;
         public int speed = 6;
@@ -39,6 +42,7 @@ namespace _2D_Race
 
         public bool Collision(Ball b)
         {
+            //creating rectangles for the collision method to work
             Rectangle heroRec = new Rectangle(x, y, width, height);
             Rectangle ballRec = new Rectangle(b.x, b.y, b.size, b.size);
 
@@ -48,6 +52,7 @@ namespace _2D_Race
                 x = 180;
                 y = 350;
                 
+                //play error sound on collision
                 SoundPlayer errorSound = new SoundPlayer(Properties.Resources.Error);
                 errorSound.Play();
             }
@@ -57,6 +62,7 @@ namespace _2D_Race
 
         public bool powerUpCollision(Rectangle powerUp)
         {
+            //used for collision
             Rectangle heroRec = new Rectangle(x, y, width, height);
 
             //if hero and power up block intersect, increase hero speed

@@ -90,12 +90,14 @@ namespace _2D_Race
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            //if up arrow is pressed, go up
             if (upArrowDown == true)
             {
                 hero.Move("up");
                 keyPressed = true;
             }
 
+            //if down arrow is pressed, go down
             else if (downArrowDown == true)
             {
                 hero.Move("down");

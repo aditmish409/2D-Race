@@ -18,6 +18,7 @@ namespace _2D_Race
             InitializeComponent();
         }
 
+        //change screen on play button click
         private void playAgainButton_Click(object sender, EventArgs e)
         {
             SoundPlayer playAgainSound = new SoundPlayer(Properties.Resources.PlayAgain);
@@ -26,6 +27,7 @@ namespace _2D_Race
             Form1.ChangeScreen(this, new MenuScreen());
         }
 
+        //close program on exit button click
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
